@@ -4,7 +4,7 @@
     "parameters": {
         "resourcePrefix": {
             "type": "string",
-            "defaultValue": "",
+          // "defaultValue": "",
             "metadata": {
                 "description": "Provide a prefix for your resource, your resources will be named as [prefix + random string]."
             }
