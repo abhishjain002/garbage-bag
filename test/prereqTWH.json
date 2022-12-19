@@ -10,13 +10,13 @@
             }
         },    
      
-        "SQLadministratorLogin": {
+        "sqlAdministratorLogin": {
             "type": "string",
             "metadata": {
                 "description": "The administrator username of the SQL logical server. Please avoid using admin as username"
             }
         },
-        "SQLadministratorLoginPassword": {
+        "sqlAdministratorLoginPassword": {
             "type": "securestring",
             "metadata": {
                 "description": "The administrator password of the SQL logical server."
@@ -107,8 +107,8 @@
             "location": "[resourceGroup().location]",
             "kind": "v12.0",
             "properties": {
-                "administratorLogin": "[parameters('SQLadministratorLogin')]",
-                "administratorLoginPassword": "[parameters('SQLadministratorLoginPassword')]",
+                "administratorLogin": "[parameters('sqlAdministratorLogin')]",
+                "administratorLoginPassword": "[parameters('sqlAdministratorLoginPassword')]",
                 "publicNetworkAccess": "Enabled",
                 "restrictOutboundNetworkAccess": "Disabled",
                 "version": "12.0",
