@@ -187,7 +187,7 @@
                 "[resourceId('Microsoft.KeyVault/vaults', variables('keyVaultName'))]"
             ],
             "properties": {
-                "value": "[parameters('SQLadministratorLoginPassword')]"
+                "value": "[parameters('sqlServerAdministratorLoginPassword')]"
             }
         },
         //Role assignment for Storage account
