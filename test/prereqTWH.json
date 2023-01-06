@@ -77,28 +77,8 @@
                 "publicAccess": "None"
             }
         },
-        {
-            "type": "Microsoft.Storage/storageAccounts/blobServices/containers",
-            "apiVersion": "2019-06-01",
-            "name": "[concat(variables('storageName'), '/default/', 'container2')]",
-            "dependsOn": [
-                "[variables('storageName')]"
-            ],
-            "properties": {
-                "publicAccess": "None"
-            }
-        },
-                {
-            "type": "Microsoft.Storage/storageAccounts/blobServices/containers",
-            "apiVersion": "2019-06-01",
-            "name": "[concat(variables('storageName'), '/default/', 'container3')]",
-            "dependsOn": [
-                "[variables('storageName')]"
-            ],
-            "properties": {
-                "publicAccess": "None"
-            }
-        },
+
+   
         //SQL DB and Server creation
         {
             "type": "Microsoft.Sql/servers",
