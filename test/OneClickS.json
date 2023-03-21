@@ -141,7 +141,7 @@
             "count": 5
           },
           "clusterProfile": {
-            "stackVersion": "3.1.2-0.2",
+            "stackVersion": "3.3.1-0.0",
             "identityProfile": {
               "msiResourceId": "[string(resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', variables('msiName')))]",
               "msiClientId": "[string(reference(resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', variables('msiName'))).clientId)]",
