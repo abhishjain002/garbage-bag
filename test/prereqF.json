@@ -61,29 +61,7 @@
                 "publicAccess": "None"
             }
         },
-        {
-            "type": "Microsoft.Storage/storageAccounts/blobServices/containers",
-            "apiVersion": "2019-06-01",
-            "name": "[concat(variables('storageName'), '/default/', 'container2')]",
-            "dependsOn": [
-                "[resourceId('Microsoft.Storage/storageAccounts', variables('storageName'))]"
-            ],
-            "properties": {
-                "publicAccess": "None"
-            }
-        },
-                {
-            "type": "Microsoft.Storage/storageAccounts/blobServices/containers",
-            "apiVersion": "2019-06-01",
-            "name": "[concat(variables('storageName'), '/default/', 'container3')]",
-            "dependsOn": [
-                "[resourceId('Microsoft.Storage/storageAccounts', variables('storageName'))]"
-            ],
-            "properties": {
-                "publicAccess": "None"
-            }
-        },
-        
+               
        
         //Role assignment for Storage account
         {
