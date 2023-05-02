@@ -98,7 +98,7 @@
             "dependsOn": [
                 "[resourceId('Microsoft.Storage/storageAccounts', variables('storageName'))]",
                 "[resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', variables('msiName'))]",
-                "[variables('storageName')]"
+                "[resourceId('Microsoft.Storage/storageAccounts', variables('storageName'))]"
                 
             ]
         }
