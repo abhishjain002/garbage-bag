@@ -135,13 +135,21 @@
         "properties": {
           "clusterType": "Spark",
           "computeProfile": {
-            //"vmSize": "Standard_D8ds_v5",
-            //"vmSize": "Standard_D5_v2",
-            "vmSize": "Standard_D4_v2",
-            "count": 5
-          },
+            "nodes": [
+                {
+                    "type": "Head",
+                    "vmSize": "Standard_D4_v2",
+                    "count": 3
+                },
+                {
+                    "type": "Worker",
+                    "vmSize": "Standard_D4_v2",
+                    "count": 2
+                }
+            ]
+        },
           "clusterProfile": {
-            "stackVersion": "3.3.1-0.0",
+            "stackVersion": "3.3.1-0.1",
             "identityProfile": {
               "msiResourceId": "[string(resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', variables('msiName')))]",
               "msiClientId": "[string(reference(resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', variables('msiName'))).clientId)]",
