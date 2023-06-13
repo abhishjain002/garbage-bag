@@ -76,7 +76,7 @@
                 {
                     "type": "Worker",
                     "vmSize": "Standard_D4_v2",
-                    "count": 1
+                    "count": 3
                 }
             ]
         },
