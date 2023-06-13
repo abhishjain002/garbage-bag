@@ -67,13 +67,21 @@
         "properties": {
           "clusterType": "Trino",
           "computeProfile": {
-            //"vmSize": "Standard_D8ds_v5",
-            //"vmSize": "Standard_D5_v2",
-            "vmSize": "Standard_D4_v2",
-            "count": 5
-          },
+            "nodes": [
+                {
+                    "type": "Head",
+                    "vmSize": "Standard_D4_v2",
+                    "count": 2
+                },
+                {
+                    "type": "Worker",
+                    "vmSize": "Standard_D4_v2",
+                    "count": 1
+                }
+            ]
+        },
           "clusterProfile": {
-            "stackVersion": "0.381.0-0.2",
+            "stackVersion": "0.407.0-0.3",
             "identityProfile": {
               "msiResourceId": "[string(resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', variables('msiName')))]",
               "msiClientId": "[string(reference(resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', variables('msiName'))).clientId)]",
