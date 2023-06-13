@@ -134,12 +134,19 @@
         ],
         "properties": {
           "clusterType": "Flink",
-          "computeProfile": {
-            //"vmSize": "Standard_D8ds_v5",
-            //"vmSize": "Standard_D5_v2",
-            "vmSize": "Standard_D4_v2",
-            "count": 5
-          },
+          "nodes": [
+                {
+                    "type": "Head",
+                    "vmSize": "Standard_D4_v2",
+                    "count": 2
+                },
+                {
+                    "type": "Worker",
+                    "vmSize": "Standard_D4_v2",
+                    "count": 3
+                }
+            ]
+        },
           "clusterProfile": {
             "stackVersion": "1.16.0-0.0",
             "identityProfile": {
