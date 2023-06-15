@@ -149,7 +149,7 @@
             ]
         },
           "clusterProfile": {
-            "stackVersion": "1.16.0-1.0",
+            "stackVersion": "1.16.0-0.0",
             "identityProfile": {
               "msiResourceId": "[string(resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', variables('msiName')))]",
               "msiClientId": "[string(reference(resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', variables('msiName'))).clientId)]",
