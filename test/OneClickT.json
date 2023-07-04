@@ -70,18 +70,29 @@
             "nodes": [
                 {
                     "type": "Head",
-                    "vmSize": "Standard_D4_v2",
+                    "vmSize": "Standard_D8ds_v5",
                     "count": 2
                 },
                 {
                     "type": "Worker",
-                    "vmSize": "Standard_D4_v2",
+                    "vmSize": "Standard_D8ds_v5",
                     "count": 3
                 }
             ]
         },
           "clusterProfile": {
-            "stackVersion": "0.407.0-0.3",
+            "clusterVersion": "1.0.4",
+            "ossVersion": "0.410.0",
+            "components": [
+                {
+                    "name": "Trino",
+                    "version": "410"
+                },
+                {
+                    "name": "Hive metastore",
+                    "version": "3.1.2"
+                }
+            ],
             "identityProfile": {
               "msiResourceId": "[string(resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', variables('msiName')))]",
               "msiClientId": "[string(reference(resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', variables('msiName'))).clientId)]",
