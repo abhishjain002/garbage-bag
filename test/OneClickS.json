@@ -11,7 +11,14 @@
         "resourcePrefix": {
             "type": "String",
             "metadata": {
-                "description": "Provide a prefix for your resource, your resources will be named as [prefix + random string]."
+              "description": "Provide a prefix for creating mandatory resources required for cluster creation, your mandatory resources will be named as [prefix + random string]."
+            }
+          },
+          "clusterVMSize": {
+            "defaultValue": "Standard_D8ds_v5",
+            "type": "String",
+            "metadata": {
+                "description": "Provide the VM Size for the cluster. Example - Standard_D8ds_v5."
             }
         },
         "userObjectId": {
@@ -122,12 +129,12 @@
                     "nodes": [
                         {
                             "type": "Head",
-                            "vmSize": "Standard_D8ds_v5",
+                            "vmSize": "[parameters('clusterVMSize')]",
                             "count": 3
                         },
                         {
                             "type": "Worker",
-                            "vmSize": "Standard_D8ds_v5",
+                            "vmSize": "[parameters('clusterVMSize')]",
                             "count": 2
                         }
                     ]
